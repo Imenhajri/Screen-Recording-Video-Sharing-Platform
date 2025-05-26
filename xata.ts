@@ -9,7 +9,7 @@ const DatabaseClient = buildClient();
 
 const defaultOptions = {
   databaseURL:
-    "https://Anil-Thapa-Magar-s-workspace-hjs5mv.eu-central-1.xata.sh/db/snap-cast",
+      "https://Imen-HAJRI-s-workspace-qhja00.eu-central-1.xata.sh/db/IH_snapcast",
   apiKey: process.env.XATA_API_KEY,
   branch: "main",
 };

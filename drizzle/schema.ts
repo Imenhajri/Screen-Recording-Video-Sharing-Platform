@@ -27,8 +27,8 @@ export const session = pgTable("session", {
   ipAddress: text("ip_address"),
   userAgent: text("user_agent"),
   userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
 });
 
 export const account = pgTable("account", {
@@ -36,8 +36,8 @@ export const account = pgTable("account", {
   accountId: text("account_id").notNull(),
   providerId: text("provider_id").notNull(),
   userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
   accessToken: text("access_token"),
   refreshToken: text("refresh_token"),
   idToken: text("id_token"),
@@ -67,8 +67,8 @@ export const videos = pgTable("videos", {
   thumbnailUrl: text("thumbnail_url").notNull(),
   visibility: text("visibility").$type<"public" | "private">().notNull(),
   userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
   views: integer("views").notNull().default(0),
   duration: integer("duration"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
